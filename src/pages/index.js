@@ -23,9 +23,9 @@ const IndexPage = () => (
      <li> <a href="https://www.linkedin.com/in/matthew-quinn-57b54511a/"><LinkedinOutlined /></a></li>
       </ul>
     </div>
-    <p>👨🏻‍💻 Software Engineer</p>
+    <p>Software Engineer</p>
     <p>📍 Boston, MA</p>
-    <p>🚨 Come back soon</p></main>
+    </main>
   </div>
   </>
 )

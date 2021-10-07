@@ -51,8 +51,15 @@ const IndexPage = () => (
     </div>
     <p>Software Engineer</p>
     <p><span role="img" aria-label="pin">📍</span> Chicago, IL</p>
-      <Button onClick={onBtcClick}>BTC: 3H4B3acFy1n1MesyA4khfcL1gHzWbJXjjW <RiFileCopyLine/></Button>
-      <div style={{marginTop:`.5rem`}}>
+    <div>
+      
+    </div>
+      <Button onClick={onBtcClick}><span style={{  textOverflow: 'ellipsis',
+  overflow: 'hidden',
+  whiteSpace: 'nowrap',
+  display: 'inline-block',
+  maxWidth: '168px'}}>BTC: 3H4B3acFy1n1MesyA4khfcL1gHzWbJXjjW </span><span style={{position:'absolute'}}><RiFileCopyLine/></span></Button>
+      <div style={{marginTop:`.5rem`}}> 
       <Button onClick={onEthClick}>ETH: mattquinn.eth<RiFileCopyLine/></Button>
       </div>
     </main>

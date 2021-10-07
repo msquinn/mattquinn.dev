@@ -5,10 +5,21 @@ import { RiFileCopyLine } from 'react-icons/ri'
 
 import '../styles/styles.scss';
 import "@fontsource/source-code-pro";
-const addr='3H4B3acFy1n1MesyA4khfcL1gHzWbJXjjW'
-const onClick = async ()=>{
+const btcAddr='3H4B3acFy1n1MesyA4khfcL1gHzWbJXjjW'
+const ethAddr='mattquinn.eth'
+
+const onBtcClick = async ()=>{
   try {
-    await navigator.clipboard.writeText(addr);
+    await navigator.clipboard.writeText(btcAddr);
+  } catch (error) {
+    message.error('Error copying address')
+  }
+  message.success('Address copied to Clipboard');
+}
+
+const onEthClick = async ()=>{
+  try {
+    await navigator.clipboard.writeText(ethAddr);
   } catch (error) {
     message.error('Error copying address')
   }
@@ -40,7 +51,10 @@ const IndexPage = () => (
     </div>
     <p>Software Engineer</p>
     <p><span role="img" aria-label="pin">📍</span> Chicago, IL</p>
-      <Button onClick={onClick}>BTC <RiFileCopyLine/></Button>
+      <Button onClick={onBtcClick}>BTC <RiFileCopyLine/></Button>
+      <div>
+      <Button onClick={onEthClick}>mattquinn.eth<RiFileCopyLine/></Button>
+      </div>
     </main>
   </div>
   </>

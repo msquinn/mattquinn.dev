@@ -1,8 +1,20 @@
 import React from "react"
 import { GithubOutlined, LinkedinOutlined } from '@ant-design/icons';
+import { message, Button} from 'antd';
+import { RiFileCopyLine } from 'react-icons/ri'
 
 import '../styles/styles.scss';
 import "@fontsource/source-code-pro";
+const addr='3H4B3acFy1n1MesyA4khfcL1gHzWbJXjjW'
+const onClick = async ()=>{
+  try {
+    await navigator.clipboard.writeText(addr);
+  } catch (error) {
+    message.error('Error copying address')
+  }
+  message.success('Address copied to Clipboard');
+}
+
 const IndexPage = () => (
   <>
   <link rel="preconnect" href="https://fonts.googleapis.com"/> 
@@ -27,7 +39,8 @@ const IndexPage = () => (
       </ul>
     </div>
     <p>Software Engineer</p>
-    <p>📍 Boston, MA</p>
+    <p><span role="img" aria-label="pin">📍</span> Chicago, IL</p>
+      <Button onClick={onClick}>BTC <RiFileCopyLine/></Button>
     </main>
   </div>
   </>

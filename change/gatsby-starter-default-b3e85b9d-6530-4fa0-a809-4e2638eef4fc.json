@@ -1,0 +1,7 @@
+{
+  "type": "minor",
+  "comment": "GT-11111 i added beachball",
+  "packageName": "gatsby-starter-default",
+  "email": "matt.quinn@blockfi.com",
+  "dependentChangeType": "patch"
+}
